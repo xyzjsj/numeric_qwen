@@ -1,0 +1,2735 @@
+[
+  {
+    "id": "sample_0000",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 73.23 + 46.29 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><119.52>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0001",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><422.5>"
+      }
+    ],
+    "image": "chart_1.jpg"
+  },
+  {
+    "id": "sample_0002",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><23.2>%"
+      }
+    ],
+    "image": "growth_chart_2.jpg"
+  },
+  {
+    "id": "sample_0003",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0004",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><21.9>%"
+      }
+    ],
+    "image": "growth_chart_4.jpg"
+  },
+  {
+    "id": "sample_0005",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><25.4>%"
+      }
+    ],
+    "image": "growth_chart_5.jpg"
+  },
+  {
+    "id": "sample_0006",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 19.85 + 19.99 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><39.84>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0007",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><40.0>"
+      }
+    ],
+    "image": "chart_7.jpg"
+  },
+  {
+    "id": "sample_0008",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><867.7>"
+      }
+    ],
+    "image": "chart_8.jpg"
+  },
+  {
+    "id": "sample_0009",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0010",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><37.8>%"
+      }
+    ],
+    "image": "growth_chart_10.jpg"
+  },
+  {
+    "id": "sample_0011",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><233.3>"
+      }
+    ],
+    "image": "chart_11.jpg"
+  },
+  {
+    "id": "sample_0012",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 97.35 × 25.72 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "97.35 × 25.72 = <num><2503.84>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0013",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><15.2>%"
+      }
+    ],
+    "image": "growth_chart_13.jpg"
+  },
+  {
+    "id": "sample_0014",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><36.0>%"
+      }
+    ],
+    "image": "growth_chart_14.jpg"
+  },
+  {
+    "id": "sample_0015",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 20.66 + 44.47 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><65.13>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0016",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><351.5>"
+      }
+    ],
+    "image": "chart_16.jpg"
+  },
+  {
+    "id": "sample_0017",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><39.8>%"
+      }
+    ],
+    "image": "growth_chart_17.jpg"
+  },
+  {
+    "id": "sample_0018",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0019",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><302.5>"
+      }
+    ],
+    "image": "chart_19.jpg"
+  },
+  {
+    "id": "sample_0020",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><59.6>"
+      }
+    ],
+    "image": "chart_20.jpg"
+  },
+  {
+    "id": "sample_0021",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 45.4 ÷ 5.19 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "45.4 ÷ 5.19 = <num><8.7476>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0022",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><853.9>"
+      }
+    ],
+    "image": "chart_22.jpg"
+  },
+  {
+    "id": "sample_0023",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><178.4>"
+      }
+    ],
+    "image": "chart_23.jpg"
+  },
+  {
+    "id": "sample_0024",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0025",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><215.4>"
+      }
+    ],
+    "image": "chart_25.jpg"
+  },
+  {
+    "id": "sample_0026",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><49.0>%"
+      }
+    ],
+    "image": "growth_chart_26.jpg"
+  },
+  {
+    "id": "sample_0027",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0028",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><153.4>"
+      }
+    ],
+    "image": "chart_28.jpg"
+  },
+  {
+    "id": "sample_0029",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><15.7>%"
+      }
+    ],
+    "image": "growth_chart_29.jpg"
+  },
+  {
+    "id": "sample_0030",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0031",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><336.9>"
+      }
+    ],
+    "image": "chart_31.jpg"
+  },
+  {
+    "id": "sample_0032",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><350.0>"
+      }
+    ],
+    "image": "chart_32.jpg"
+  },
+  {
+    "id": "sample_0033",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0034",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><707.8>"
+      }
+    ],
+    "image": "chart_34.jpg"
+  },
+  {
+    "id": "sample_0035",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><409.4>"
+      }
+    ],
+    "image": "chart_35.jpg"
+  },
+  {
+    "id": "sample_0036",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0037",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><17.6>%"
+      }
+    ],
+    "image": "growth_chart_37.jpg"
+  },
+  {
+    "id": "sample_0038",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><815.9>"
+      }
+    ],
+    "image": "chart_38.jpg"
+  },
+  {
+    "id": "sample_0039",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 60.26 + 79.13 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><139.39>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0040",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><989.0>"
+      }
+    ],
+    "image": "chart_40.jpg"
+  },
+  {
+    "id": "sample_0041",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><38.5>%"
+      }
+    ],
+    "image": "growth_chart_41.jpg"
+  },
+  {
+    "id": "sample_0042",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 5.71 + 70.04 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><75.75>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0043",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><739.7>"
+      }
+    ],
+    "image": "chart_43.jpg"
+  },
+  {
+    "id": "sample_0044",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><772.8>"
+      }
+    ],
+    "image": "chart_44.jpg"
+  },
+  {
+    "id": "sample_0045",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0046",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><19.9>%"
+      }
+    ],
+    "image": "growth_chart_46.jpg"
+  },
+  {
+    "id": "sample_0047",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><41.4>%"
+      }
+    ],
+    "image": "growth_chart_47.jpg"
+  },
+  {
+    "id": "sample_0048",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 19.06 ÷ 69.34 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "19.06 ÷ 69.34 = <num><0.2749>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0049",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><17.6>%"
+      }
+    ],
+    "image": "growth_chart_49.jpg"
+  },
+  {
+    "id": "sample_0050",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><43.5>%"
+      }
+    ],
+    "image": "growth_chart_0.jpg"
+  },
+  {
+    "id": "sample_0051",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 30.11 + 58.06 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><88.17>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0052",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><65.8>"
+      }
+    ],
+    "image": "chart_2.jpg"
+  },
+  {
+    "id": "sample_0053",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><15.6>%"
+      }
+    ],
+    "image": "growth_chart_3.jpg"
+  },
+  {
+    "id": "sample_0054",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 73.34 × 51.99 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "73.34 × 51.99 = <num><3812.95>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0055",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><14.5>%"
+      }
+    ],
+    "image": "growth_chart_5.jpg"
+  },
+  {
+    "id": "sample_0056",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><17.2>%"
+      }
+    ],
+    "image": "growth_chart_6.jpg"
+  },
+  {
+    "id": "sample_0057",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0058",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><525.4>"
+      }
+    ],
+    "image": "chart_8.jpg"
+  },
+  {
+    "id": "sample_0059",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><28.6>"
+      }
+    ],
+    "image": "chart_9.jpg"
+  },
+  {
+    "id": "sample_0060",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 50.29 + 74.32 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><124.61>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0061",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><120.9>"
+      }
+    ],
+    "image": "chart_11.jpg"
+  },
+  {
+    "id": "sample_0062",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><328.2>"
+      }
+    ],
+    "image": "chart_12.jpg"
+  },
+  {
+    "id": "sample_0063",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 92.14 ÷ 43.4 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "92.14 ÷ 43.4 = <num><2.123>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0064",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><415.3>"
+      }
+    ],
+    "image": "chart_14.jpg"
+  },
+  {
+    "id": "sample_0065",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><18.8>%"
+      }
+    ],
+    "image": "growth_chart_15.jpg"
+  },
+  {
+    "id": "sample_0066",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0067",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><656.7>"
+      }
+    ],
+    "image": "chart_17.jpg"
+  },
+  {
+    "id": "sample_0068",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><356.5>"
+      }
+    ],
+    "image": "chart_18.jpg"
+  },
+  {
+    "id": "sample_0069",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0070",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><44.9>%"
+      }
+    ],
+    "image": "growth_chart_20.jpg"
+  },
+  {
+    "id": "sample_0071",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><155.4>"
+      }
+    ],
+    "image": "chart_21.jpg"
+  },
+  {
+    "id": "sample_0072",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 46.27 + 10.61 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><56.88>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0073",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><445.3>"
+      }
+    ],
+    "image": "chart_23.jpg"
+  },
+  {
+    "id": "sample_0074",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><951.0>"
+      }
+    ],
+    "image": "chart_24.jpg"
+  },
+  {
+    "id": "sample_0075",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 36.9 ÷ 81.58 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "36.9 ÷ 81.58 = <num><0.4523>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0076",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><152.5>"
+      }
+    ],
+    "image": "chart_26.jpg"
+  },
+  {
+    "id": "sample_0077",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><535.6>"
+      }
+    ],
+    "image": "chart_27.jpg"
+  },
+  {
+    "id": "sample_0078",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 96.62 × 96.12 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "96.62 × 96.12 = <num><9287.11>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0079",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><444.5>"
+      }
+    ],
+    "image": "chart_29.jpg"
+  },
+  {
+    "id": "sample_0080",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><201.9>"
+      }
+    ],
+    "image": "chart_30.jpg"
+  },
+  {
+    "id": "sample_0081",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0082",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><29.2>%"
+      }
+    ],
+    "image": "growth_chart_32.jpg"
+  },
+  {
+    "id": "sample_0083",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><129.5>"
+      }
+    ],
+    "image": "chart_33.jpg"
+  },
+  {
+    "id": "sample_0084",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 22.28 ÷ 37.3 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "22.28 ÷ 37.3 = <num><0.5973>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0085",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><18.9>%"
+      }
+    ],
+    "image": "growth_chart_35.jpg"
+  },
+  {
+    "id": "sample_0086",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><33.7>%"
+      }
+    ],
+    "image": "growth_chart_36.jpg"
+  },
+  {
+    "id": "sample_0087",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0088",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><14.3>%"
+      }
+    ],
+    "image": "growth_chart_38.jpg"
+  },
+  {
+    "id": "sample_0089",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><110.0>"
+      }
+    ],
+    "image": "chart_39.jpg"
+  },
+  {
+    "id": "sample_0090",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 13.5 × 31.95 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "13.5 × 31.95 = <num><431.32>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0091",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><134.5>"
+      }
+    ],
+    "image": "chart_41.jpg"
+  },
+  {
+    "id": "sample_0092",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><261.5>"
+      }
+    ],
+    "image": "chart_42.jpg"
+  },
+  {
+    "id": "sample_0093",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 61.95 × 42.44 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "61.95 × 42.44 = <num><2629.16>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0094",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><562.1>"
+      }
+    ],
+    "image": "chart_44.jpg"
+  },
+  {
+    "id": "sample_0095",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><35.2>%"
+      }
+    ],
+    "image": "growth_chart_45.jpg"
+  },
+  {
+    "id": "sample_0096",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 49.2 ÷ 42.82 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "49.2 ÷ 42.82 = <num><1.149>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0097",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><487.5>"
+      }
+    ],
+    "image": "chart_47.jpg"
+  },
+  {
+    "id": "sample_0098",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><23.3>%"
+      }
+    ],
+    "image": "growth_chart_48.jpg"
+  },
+  {
+    "id": "sample_0099",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 79.2 + 67.7 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><146.9>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0100",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><19.1>%"
+      }
+    ],
+    "image": "growth_chart_0.jpg"
+  },
+  {
+    "id": "sample_0101",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><47.7>%"
+      }
+    ],
+    "image": "growth_chart_1.jpg"
+  },
+  {
+    "id": "sample_0102",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0103",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><317.0>"
+      }
+    ],
+    "image": "chart_3.jpg"
+  },
+  {
+    "id": "sample_0104",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><624.4>"
+      }
+    ],
+    "image": "chart_4.jpg"
+  },
+  {
+    "id": "sample_0105",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0106",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><620.4>"
+      }
+    ],
+    "image": "chart_6.jpg"
+  },
+  {
+    "id": "sample_0107",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><87.5>"
+      }
+    ],
+    "image": "chart_7.jpg"
+  },
+  {
+    "id": "sample_0108",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0109",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><6.0>%"
+      }
+    ],
+    "image": "growth_chart_9.jpg"
+  },
+  {
+    "id": "sample_0110",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><257.9>"
+      }
+    ],
+    "image": "chart_10.jpg"
+  },
+  {
+    "id": "sample_0111",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 23.9 + 12.65 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><36.55>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0112",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><48.7>%"
+      }
+    ],
+    "image": "growth_chart_12.jpg"
+  },
+  {
+    "id": "sample_0113",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><664.3>"
+      }
+    ],
+    "image": "chart_13.jpg"
+  },
+  {
+    "id": "sample_0114",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 20.01 ÷ 34.78 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "20.01 ÷ 34.78 = <num><0.5753>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0115",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><750.0>"
+      }
+    ],
+    "image": "chart_15.jpg"
+  },
+  {
+    "id": "sample_0116",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><600.7>"
+      }
+    ],
+    "image": "chart_16.jpg"
+  },
+  {
+    "id": "sample_0117",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 54.76 × 4.01 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "54.76 × 4.01 = <num><219.59>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0118",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><941.5>"
+      }
+    ],
+    "image": "chart_18.jpg"
+  },
+  {
+    "id": "sample_0119",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><456.8>"
+      }
+    ],
+    "image": "chart_19.jpg"
+  },
+  {
+    "id": "sample_0120",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0121",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><779.0>"
+      }
+    ],
+    "image": "chart_21.jpg"
+  },
+  {
+    "id": "sample_0122",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><368.6>"
+      }
+    ],
+    "image": "chart_22.jpg"
+  },
+  {
+    "id": "sample_0123",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0124",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><128.3>"
+      }
+    ],
+    "image": "chart_24.jpg"
+  },
+  {
+    "id": "sample_0125",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><327.1>"
+      }
+    ],
+    "image": "chart_25.jpg"
+  },
+  {
+    "id": "sample_0126",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 5.46 + 6.09 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><11.55>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0127",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><481.1>"
+      }
+    ],
+    "image": "chart_27.jpg"
+  },
+  {
+    "id": "sample_0128",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><196.4>"
+      }
+    ],
+    "image": "chart_28.jpg"
+  },
+  {
+    "id": "sample_0129",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 16.1 + 61.57 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><77.67>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0130",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><457.4>"
+      }
+    ],
+    "image": "chart_30.jpg"
+  },
+  {
+    "id": "sample_0131",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><558.5>"
+      }
+    ],
+    "image": "chart_31.jpg"
+  },
+  {
+    "id": "sample_0132",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 7.29 + 58.16 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><65.45>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0133",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><36.8>%"
+      }
+    ],
+    "image": "growth_chart_33.jpg"
+  },
+  {
+    "id": "sample_0134",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><44.5>%"
+      }
+    ],
+    "image": "growth_chart_34.jpg"
+  },
+  {
+    "id": "sample_0135",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0136",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><469.1>"
+      }
+    ],
+    "image": "chart_36.jpg"
+  },
+  {
+    "id": "sample_0137",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><34.8>"
+      }
+    ],
+    "image": "chart_37.jpg"
+  },
+  {
+    "id": "sample_0138",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0139",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><36.7>"
+      }
+    ],
+    "image": "chart_39.jpg"
+  },
+  {
+    "id": "sample_0140",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><150.6>"
+      }
+    ],
+    "image": "chart_40.jpg"
+  },
+  {
+    "id": "sample_0141",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "e的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "自然常数e的近似值是 <num><2.71828>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0142",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><743.5>"
+      }
+    ],
+    "image": "chart_42.jpg"
+  },
+  {
+    "id": "sample_0143",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><202.5>"
+      }
+    ],
+    "image": "chart_43.jpg"
+  },
+  {
+    "id": "sample_0144",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0145",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><108.8>"
+      }
+    ],
+    "image": "chart_45.jpg"
+  },
+  {
+    "id": "sample_0146",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><49.6>"
+      }
+    ],
+    "image": "chart_46.jpg"
+  },
+  {
+    "id": "sample_0147",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 69.85 × 97.15 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "69.85 × 97.15 = <num><6785.93>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0148",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><37.9>"
+      }
+    ],
+    "image": "chart_48.jpg"
+  },
+  {
+    "id": "sample_0149",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><112.3>"
+      }
+    ],
+    "image": "chart_49.jpg"
+  },
+  {
+    "id": "sample_0150",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0151",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><49.6>%"
+      }
+    ],
+    "image": "growth_chart_1.jpg"
+  },
+  {
+    "id": "sample_0152",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><218.1>"
+      }
+    ],
+    "image": "chart_2.jpg"
+  },
+  {
+    "id": "sample_0153",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0154",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><206.0>"
+      }
+    ],
+    "image": "chart_4.jpg"
+  },
+  {
+    "id": "sample_0155",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><9.7>%"
+      }
+    ],
+    "image": "growth_chart_5.jpg"
+  },
+  {
+    "id": "sample_0156",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 91.33 × 14.92 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "91.33 × 14.92 = <num><1362.64>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0157",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><162.6>"
+      }
+    ],
+    "image": "chart_7.jpg"
+  },
+  {
+    "id": "sample_0158",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><841.2>"
+      }
+    ],
+    "image": "chart_8.jpg"
+  },
+  {
+    "id": "sample_0159",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0160",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><21.4>%"
+      }
+    ],
+    "image": "growth_chart_10.jpg"
+  },
+  {
+    "id": "sample_0161",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><17.1>%"
+      }
+    ],
+    "image": "growth_chart_11.jpg"
+  },
+  {
+    "id": "sample_0162",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0163",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><22.8>%"
+      }
+    ],
+    "image": "growth_chart_13.jpg"
+  },
+  {
+    "id": "sample_0164",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><75.4>"
+      }
+    ],
+    "image": "chart_14.jpg"
+  },
+  {
+    "id": "sample_0165",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0166",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><271.1>"
+      }
+    ],
+    "image": "chart_16.jpg"
+  },
+  {
+    "id": "sample_0167",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><260.8>"
+      }
+    ],
+    "image": "chart_17.jpg"
+  },
+  {
+    "id": "sample_0168",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0169",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><97.5>"
+      }
+    ],
+    "image": "chart_19.jpg"
+  },
+  {
+    "id": "sample_0170",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><124.5>"
+      }
+    ],
+    "image": "chart_20.jpg"
+  },
+  {
+    "id": "sample_0171",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0172",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><192.8>"
+      }
+    ],
+    "image": "chart_22.jpg"
+  },
+  {
+    "id": "sample_0173",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><157.2>"
+      }
+    ],
+    "image": "chart_23.jpg"
+  },
+  {
+    "id": "sample_0174",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 56.02 ÷ 5.41 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "56.02 ÷ 5.41 = <num><10.3549>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0175",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><420.0>"
+      }
+    ],
+    "image": "chart_25.jpg"
+  },
+  {
+    "id": "sample_0176",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><637.8>"
+      }
+    ],
+    "image": "chart_26.jpg"
+  },
+  {
+    "id": "sample_0177",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0178",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><457.2>"
+      }
+    ],
+    "image": "chart_28.jpg"
+  },
+  {
+    "id": "sample_0179",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><26.4>%"
+      }
+    ],
+    "image": "growth_chart_29.jpg"
+  },
+  {
+    "id": "sample_0180",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 19.72 ÷ 44.35 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "19.72 ÷ 44.35 = <num><0.4446>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0181",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><621.1>"
+      }
+    ],
+    "image": "chart_31.jpg"
+  },
+  {
+    "id": "sample_0182",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><483.7>"
+      }
+    ],
+    "image": "chart_32.jpg"
+  },
+  {
+    "id": "sample_0183",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "π的近似值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "π的近似值是 <num><3.14159>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0184",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><104.8>"
+      }
+    ],
+    "image": "chart_34.jpg"
+  },
+  {
+    "id": "sample_0185",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><43.6>%"
+      }
+    ],
+    "image": "growth_chart_35.jpg"
+  },
+  {
+    "id": "sample_0186",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 34.89 + 78.86 的结果"
+      },
+      {
+        "from": "gpt",
+        "value": "计算结果是 <num><113.75>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0187",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><29.0>"
+      }
+    ],
+    "image": "chart_37.jpg"
+  },
+  {
+    "id": "sample_0188",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><42.3>"
+      }
+    ],
+    "image": "chart_38.jpg"
+  },
+  {
+    "id": "sample_0189",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 69.93 × 62.17 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "69.93 × 62.17 = <num><4347.55>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0190",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个柱状图显示的最大值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "从图表可以看出，最大值是 <num><479.7>"
+      }
+    ],
+    "image": "chart_40.jpg"
+  },
+  {
+    "id": "sample_0191",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><381.0>"
+      }
+    ],
+    "image": "chart_41.jpg"
+  },
+  {
+    "id": "sample_0192",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "黄金比例的值是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黄金比例φ = <num><1.618>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0193",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><71.0>"
+      }
+    ],
+    "image": "chart_43.jpg"
+  },
+  {
+    "id": "sample_0194",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><384.2>"
+      }
+    ],
+    "image": "chart_44.jpg"
+  },
+  {
+    "id": "sample_0195",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 63.22 × 30.24 的乘积"
+      },
+      {
+        "from": "gpt",
+        "value": "63.22 × 30.24 = <num><1911.77>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0196",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><41.3>%"
+      }
+    ],
+    "image": "growth_chart_46.jpg"
+  },
+  {
+    "id": "sample_0197",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n这个图表显示的增长率是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "图表显示的增长率为 <num><31.1>%"
+      }
+    ],
+    "image": "growth_chart_47.jpg"
+  },
+  {
+    "id": "sample_0198",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "计算 47.76 ÷ 11.67 的商"
+      },
+      {
+        "from": "gpt",
+        "value": "47.76 ÷ 11.67 = <num><4.0925>"
+      }
+    ]
+  },
+  {
+    "id": "sample_0199",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n图表中的平均值是多少？"
+      },
+      {
+        "from": "gpt",
+        "value": "根据图表数据计算，平均值为 <num><100.3>"
+      }
+    ],
+    "image": "chart_49.jpg"
+  }
+]

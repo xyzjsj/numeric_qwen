@@ -1,0 +1,10 @@
+# Python cache
+__pycache__/
+
+# output
+output/
+
+#log
+swanlog/
+wandb/
+numeric_qwen2.5_vl_complete_evaluation*/

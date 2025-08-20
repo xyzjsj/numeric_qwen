@@ -1,0 +1,90 @@
+{
+  "checkpoint_path": "/data1/wangzhiye/1a1a11/custom_qwen_checkpoint_4250/output/checkpoint-4250",
+  "test_data_path": "/data1/wangzhiye/LLaMA-Factory/data/5vqa_data_extracted_test_converted.json",
+  "total_samples": 10,
+  "valid_samples": 10,
+  "average_tfidf_similarity": 0.0,
+  "average_embedding_similarity": 0.0,
+  "detailed_results": [
+    {
+      "sample_id": 27,
+      "question": "Are there any pedestrians or cyclists in the vicinity of the vehicle?",
+      "ground_truth": "No, there are no pedestrians or cyclists visible in the immediate vicinity of the vehicle.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 23,
+      "question": "If you follow the trajectory [PT, (+2.12, +1.54), (+11.08, +4.29), (+37.03, +12.35), (+42.30, +14.63), (+47.24, +16.87), (+48.41, +17.25)], what would happen?",
+      "ground_truth": "Following this trajectory, which involves moving slowly, accelerating, and making a left turn, would result in a collision with the stopped construction vehicle at (+42.0, +15.4). This trajectory is dangerous and should be avoided to ensure safety.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 31,
+      "question": "Are there any visible pedestrians or cyclists around the vehicle?",
+      "ground_truth": "No pedestrians or cyclists are visible in the immediate vicinity of the vehicle, suggesting a clear path for maneuvering without needing to yield.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 21,
+      "question": "Considering the current road conditions and visibility, what driving precautions would you suggest?",
+      "ground_truth": "Maintain a moderate speed, stay alert for pedestrians or vehicles entering the roadway, and perform periodic rearview mirror checks as part of standard driving vigilance.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 27,
+      "question": "Is there any ongoing construction or road work visible?",
+      "ground_truth": "Yes, to the left-front of the vehicle, there's a stationary truck and construction warning signs, indicating that there might be road work underway or at least some form of temporary obstruction, such as loading or unloading activities.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 25,
+      "question": "How would you describe the weather conditions based on the sky's appearance?",
+      "ground_truth": "The sky is overcast, which could imply early morning or late afternoon conditions. The weather appears mild without any signs of precipitation.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 31,
+      "question": "What should be your next move and why?",
+      "ground_truth": "Given the current scenario, the next action should be to proceed with moderate speed and maintain the current lane, continuing straight ahead. The road ahead is clear, but it's important to be vigilant of the pedestrian at (+10.3, +4.6) and the construction vehicle at (+19.7, +6.1). Additionally, watch for any changes in road conditions due to the overcast weather.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 25,
+      "question": "Is there any traffic directly ahead of our vehicle?",
+      "ground_truth": "Directly ahead, the road is free of traffic, allowing clear passage towards the contemporary glass-fronted building.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 27,
+      "question": "If you follow the trajectory [PT, (+13.77, -0.04), (+27.28, -0.14), (+41.39, +0.03), (+46.98, +0.18), (+47.28, +0.22), (+48.59, +0.26)], what would happen?",
+      "ground_truth": "This trajectory involves moving fast, decelerating, and lane keeping while going straight. It is relatively safe and avoids any immediate obstacles. However, maintaining such a high speed might not be necessary given the tranquil state of traffic and could reduce reaction time if any unexpected elements appear.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    },
+    {
+      "sample_id": 27,
+      "question": "Are there traffic elements that may affect your driving behavior?",
+      "ground_truth": "In this scenario, there are several elements that could impact your driving. Notably, there is a stopped construction vehicle in the front left at location (+6.1, +5.4), which may obstruct your path. Additionally, a pedestrian is moving in the back left at location (-3.3, +4.9) with a velocity of (+0.1, +0.4), and there is a traffic cone at location (-3.5, +3.7). These elements require cautious driving and attention to avoid potential hazards.",
+      "predicted_response": "",
+      "tfidf_similarity": 0.0,
+      "embedding_similarity": 0.0
+    }
+  ]
+}
