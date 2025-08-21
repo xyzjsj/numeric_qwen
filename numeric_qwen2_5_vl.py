@@ -280,19 +280,7 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         if input_ids is not None and numeric_values is not None and numeric_positions is not None:
             # 获取基础embeddings
             if inputs_embeds is None:
-                # 索引范围检查，超出范围替换为unk_token_id
-                vocab_size = self.get_input_embeddings().weight.shape[0]
-                # 获取unk_token_id，优先从processor
-                unk_token_id = 0
-                if hasattr(self, 'processor') and hasattr(self.processor, 'tokenizer'):
-                    unk_token_id = getattr(self.processor.tokenizer, 'unk_token_id', 0)
-                elif hasattr(self.config, 'unk_token_id'):
-                    unk_token_id = getattr(self.config, 'unk_token_id', 0)
-                safe_input_ids = input_ids.clone()
-                if (safe_input_ids >= vocab_size).any() or (safe_input_ids < 0).any():
-                    print(f"WARNING: input_ids中有超出词表范围的索引，已替换为unk_token_id={unk_token_id}")
-                    safe_input_ids[(safe_input_ids >= vocab_size) | (safe_input_ids < 0)] = unk_token_id
-                modified_inputs_embeds = self.get_input_embeddings()(safe_input_ids)
+                modified_inputs_embeds = self.get_input_embeddings()(input_ids)
             else:
                 modified_inputs_embeds = inputs_embeds.clone()
             
@@ -315,10 +303,10 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
                         
                         # 数据有效性检查
                         if not isinstance(values, list):
-                            print(f"WARNING: numeric_values[{batch_idx}] 不是列表: {type(values)}")
+                            print("WARNING: numeric_values[{batch_idx}] 不是列表: {type(values)}")
                             continue
                         if not isinstance(positions, list):
-                            print(f"WARNING: numeric_positions[{batch_idx}] 不是列表: {type(positions)}")
+                            print("WARNING: numeric_positions[{batch_idx}] 不是列表: {type(positions)}")
                             continue
                         
                         # 确保values和positions长度一致
@@ -337,14 +325,14 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
                                 
                                 # 数值有效性检查
                                 if math.isnan(value) or math.isinf(value):
-                                    print(f"WARNING: 无效数值 {value} 在位置 {pos}")
+                                    print("WARNING: 无效数值 {value} 在位置 {pos}")
                                     value = 0.0
                                 
                                 # 数值范围限制，防止溢出
                                 value = max(-1e6, min(1e6, value))
                                 
                             except (ValueError, TypeError) as e:
-                                print(f"WARNING: 数值转换失败: value={value}, pos={pos}, error={e}")
+                                print("WARNING: 数值转换失败: value={value}, pos={pos}, error={e}")
                                 continue
                             
                             # 检查位置是否有效
@@ -358,15 +346,16 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
                                                                 dtype=modified_inputs_embeds.dtype)
                                         
                                         numeric_emb = self.numeric_embedding(value_tensor).squeeze(0).squeeze(0)
-                                        
+                                        print(numeric_emb)
                                         # 检查embedding是否包含NaN
                                         if torch.isnan(numeric_emb).any():
-                                            print(f"WARNING: 数值embedding包含NaN! value={value}")
+                                            print(numeric_emb)
+                                            print(f"WARNING: 啊啊啊啊数值embedding包含NaN! value={value}")
                                             numeric_emb = torch.zeros_like(numeric_emb)
                                         
                                         # 检查embedding是否包含Inf
                                         if torch.isinf(numeric_emb).any():
-                                            print(f"WARNING: 数值embedding包含Inf! value={value}")
+                                            print("WARNING: 数值embedding包含Inf! value={value}")
                                             numeric_emb = torch.clamp(numeric_emb, -1e6, 1e6)
                                         
                                         # 替换对应位置的embedding
@@ -374,7 +363,7 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
                                         numeric_replaced_count += 1
                                         
                                     except Exception as e:
-                                        print(f"ERROR: 计算数值embedding失败: value={value}, pos={pos}, error={e}")
+                                        print("ERROR: 计算数值embedding失败: value={value}, pos={pos}, error={e}")
                                         continue
         
         if numeric_replaced_count > 0:
@@ -651,9 +640,9 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         
         if torch.distributed.is_initialized():
             if torch.distributed.get_rank() == 0:
-                print(f"Token Loss: {loss_token.item():.4f}, Float Loss: {loss_float.item():.4f}")
+                print(f"Token Loss: {loss_token.item():.8f}, Float Loss: {loss_float.item():.8f}")
         else:
-            print(f"Token Loss: {loss_token.item():.4f}, Float Loss: {loss_float.item():.4f}")
+            print(f"Token Loss: {loss_token.item():.8f}, Float Loss: {loss_float.item():.8f}")
         
         return total_loss
 
@@ -697,6 +686,6 @@ AutoModelForCausalLM.register(NumericQwen2_5_VLConfig, NumericQwen2_5_VLForCondi
 AutoProcessor.register(NumericQwen2_5_VLConfig, NumericQwen2_5_VLProcessor)
 
 print(">>> 数值增强Qwen2.5-VL模型组件已注册")
-print(f">>> 配置类: {NumericQwen2_5_VLConfig}")
-print(f">>> 模型类: {NumericQwen2_5_VLForConditionalGeneration}")
-print(f">>> 处理器类: {NumericQwen2_5_VLProcessor}")
+print(">>> 配置类: {NumericQwen2_5_VLConfig}")
+print(">>> 模型类: {NumericQwen2_5_VLForConditionalGeneration}")
+print(">>> 处理器类: {NumericQwen2_5_VLProcessor}")

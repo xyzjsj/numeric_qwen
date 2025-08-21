@@ -87,7 +87,7 @@ def main():
         exp_name="numeric_qwen2_5_vl_vqa_v1"
     )
     
-    print(f"训练配置:")
+    print("训练配置:")
     print(f"- 输出目录: {training_args.output_dir}")
     print(f"- 模型路径: {training_args.model_name_or_path}")
     print(f"- 训练数据路径: {training_args.data_path}")
@@ -96,7 +96,7 @@ def main():
     print(f"- 数值损失权重: {training_args.numeric_loss_weight}")
     print(f"- SwanLab项目: {training_args.swanlab_project}")
     print(f"- SwanLab实验: {training_args.swanlab_experiment}")
-    print(f"- 评估策略: {training_args.eval_strategy}")
+    print("- 评估策略: {training_args.eval_strategy}")
     if training_args.eval_strategy != "no":
         print(f"- 评估步数: {training_args.eval_steps}")
     

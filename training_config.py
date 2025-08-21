@@ -514,7 +514,7 @@ def create_model_and_processor(
     model = NumericQwen2_5_VLForConditionalGeneration.from_pretrained(
         model_path,
         config=config,
-        torch_dtype=torch.bfloat16,
+        torch_dtype=torch.float32,  # 强制使用fp32
         device_map="auto",
         trust_remote_code=True
     )

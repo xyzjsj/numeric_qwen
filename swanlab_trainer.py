@@ -443,11 +443,15 @@ def log_sample_data_to_swanlab(swanlab_run, dataset, processor, num_samples=5):
                 "has_numeric": len(item.get('numeric_values', [])) > 0,
             }
             
-            # 添加数值信息
             if item.get('numeric_values'):
-                sample_info["numeric_count"] = len(item['numeric_values'][0]) if item['numeric_values'] else 0
                 if item['numeric_values']:
-                    sample_info["numeric_values"] = str(item['numeric_values'][0][:3])  # 只显示前3个数值
+                    first_group = item['numeric_values'][0]
+                    if not isinstance(first_group, (list, tuple)):
+                        first_group = [first_group]
+                    sample_info["numeric_count"] = len(first_group)
+                    sample_info["numeric_values"] = str(first_group[:3])  # 只显示前3个数值
+                else:
+                    sample_info["numeric_count"] = 0
             
             # 解码文本样本
             if 'input_ids' in item and processor:
