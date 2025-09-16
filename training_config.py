@@ -15,6 +15,7 @@ from torch.utils.data import Dataset
 import copy
 from PIL import Image
 import swanlab
+from torch.nn import CrossEntropyLoss, MSELoss
 
 # 导入我们的自定义模型
 from numeric_qwen2_5_vl import (

@@ -24,7 +24,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ---------------- 配置 ---------------- #
-CHECKPOINT_PATH = "/data1/wangzhiye/1a1a11/custom_qwen_checkpoint_4250/output/checkpoint-4250"
+CHECKPOINT_PATH = "/data1/wangzhiye/results/omini/custom_num/checkpoint-4200"
 TEST_DATA_PATH = "/data1/wangzhiye/LLaMA-Factory/data/5vqa_data_extracted_test_converted.json"  # 数据项含 messages / images
 NUM_SAMPLES = 15200          # 0 或负数表示遍历全部问答对
 MAX_IMAGES_PER_Q = 6      # 每个问题最多使用的图像数量（场景有 6 视角）
@@ -34,7 +34,7 @@ FORCE_MANUAL_TEMPLATE = True  # 强制使用手动 prompt，不尝试 apply_chat
 USE_EMBEDDING_SIM = False  # 如需开启嵌入相似度改为 True（较慢）
 MAX_NEW_TOKENS = 128
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-OUTPUT_JSON_PATH = "/data1/wangzhiye/1a1a11/custom_qwen_checkpoint_4250/cosine_eval_results_num.json"  # 结果保存路径
+OUTPUT_JSON_PATH = "/data1/wangzhiye/results/first_time/omini/custom_num/results.json"  # 结果保存路径
 SAVE_EVERY = 50  # 每处理多少条增量写盘一次（0 表示仅最后写）
 
 

@@ -273,109 +273,81 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         """
         return_dict = return_dict if return_dict is not None else self.config.use_return_dict
         
-        # 处理数值embedding融入
-        modified_inputs_embeds = inputs_embeds
+        # 始终基于 embeddings 进行计算
+        base_inputs_embeds = None
         numeric_replaced_count = 0
-        
-        if input_ids is not None and numeric_values is not None and numeric_positions is not None:
-            # 获取基础embeddings
-            if inputs_embeds is None:
-                modified_inputs_embeds = self.get_input_embeddings()(input_ids)
-            else:
-                modified_inputs_embeds = inputs_embeds.clone()
-            
-            # 检查输入是否包含NaN
-            if torch.isnan(modified_inputs_embeds).any():
+
+        # 1) 构造基础 embeddings（优先使用传入的 inputs_embeds，否则用 input_ids 计算）
+        if inputs_embeds is not None:
+            base_inputs_embeds = inputs_embeds.clone()
+        elif input_ids is not None:
+            base_inputs_embeds = self.get_input_embeddings()(input_ids)
+
+        # 2) 融入数值 embedding（需要 input_ids 才能定位替换位置）
+        if (
+            base_inputs_embeds is not None
+            and input_ids is not None
+            and numeric_values is not None
+            and numeric_positions is not None
+        ):
+            # 清理 NaN
+            if torch.isnan(base_inputs_embeds).any():
                 print("embeddings包含NaN!!!!!!")
-                modified_inputs_embeds = torch.nan_to_num(modified_inputs_embeds, nan=0.0)
-            
-            # 获取num_pad_token_id
+                base_inputs_embeds = torch.nan_to_num(base_inputs_embeds, nan=0.0)
+
             num_pad_token_id = getattr(self.config, 'num_pad_token_id', None) or getattr(self, 'num_pad_token_id', None)
-            
             if num_pad_token_id is not None:
-                batch_size = input_ids.shape[0] if input_ids is not None else modified_inputs_embeds.shape[0]
-                
-                # 遍历batch中的每个样本
+                batch_size = input_ids.shape[0]
                 for batch_idx in range(batch_size):
                     if batch_idx < len(numeric_values) and numeric_values[batch_idx]:
                         values = numeric_values[batch_idx]
                         positions = numeric_positions[batch_idx]
-                        
-                        # 数据有效性检查
-                        if not isinstance(values, list):
-                            print("WARNING: numeric_values[{batch_idx}] 不是列表: {type(values)}")
+
+                        if not isinstance(values, list) or not isinstance(positions, list):
                             continue
-                        if not isinstance(positions, list):
-                            print("WARNING: numeric_positions[{batch_idx}] 不是列表: {type(positions)}")
-                            continue
-                        
-                        # 确保values和positions长度一致
+
                         min_len = min(len(values), len(positions))
                         values = values[:min_len]
                         positions = positions[:min_len]
-                        
-                        # 为每个数值计算embedding并替换对应位置
+
                         for value, pos in zip(values, positions):
                             if isinstance(pos, (list, tuple)):
                                 pos = pos[0] if len(pos) > 0 else 0
-                            
                             try:
                                 pos = int(pos)
                                 value = float(value)
-                                
-                                # 数值有效性检查
                                 if math.isnan(value) or math.isinf(value):
-                                    print("WARNING: 无效数值 {value} 在位置 {pos}")
                                     value = 0.0
-                                
-                                # 数值范围限制，防止溢出
                                 value = max(-1e6, min(1e6, value))
-                                
-                            except (ValueError, TypeError) as e:
-                                print("WARNING: 数值转换失败: value={value}, pos={pos}, error={e}")
+                            except (ValueError, TypeError):
                                 continue
-                            
-                            # 检查位置是否有效
-                            if 0 <= pos < modified_inputs_embeds.shape[1]:
-                                # 检查该位置是否确实是num_pad_token
-                                if input_ids is not None and input_ids[batch_idx, pos].item() == num_pad_token_id:
+
+                            if 0 <= pos < base_inputs_embeds.shape[1]:
+                                if input_ids[batch_idx, pos].item() == num_pad_token_id:
                                     try:
-                                        # 计算数值embedding
-                                        value_tensor = torch.tensor([[value]], 
-                                                                device=modified_inputs_embeds.device, 
-                                                                dtype=modified_inputs_embeds.dtype)
-                                        
+                                        value_tensor = torch.tensor([[value]], device=base_inputs_embeds.device, dtype=base_inputs_embeds.dtype)
                                         numeric_emb = self.numeric_embedding(value_tensor).squeeze(0).squeeze(0)
-                                        print(numeric_emb)
-                                        # 检查embedding是否包含NaN
                                         if torch.isnan(numeric_emb).any():
-                                            print(numeric_emb)
-                                            print(f"WARNING: 啊啊啊啊数值embedding包含NaN! value={value}")
                                             numeric_emb = torch.zeros_like(numeric_emb)
-                                        
-                                        # 检查embedding是否包含Inf
                                         if torch.isinf(numeric_emb).any():
-                                            print("WARNING: 数值embedding包含Inf! value={value}")
                                             numeric_emb = torch.clamp(numeric_emb, -1e6, 1e6)
-                                        
-                                        # 替换对应位置的embedding
-                                        modified_inputs_embeds[batch_idx, pos] = numeric_emb
+                                        base_inputs_embeds[batch_idx, pos] = numeric_emb
                                         numeric_replaced_count += 1
-                                        
-                                    except Exception as e:
-                                        print("ERROR: 计算数值embedding失败: value={value}, pos={pos}, error={e}")
+                                    except Exception:
                                         continue
-        
+
         if numeric_replaced_count > 0:
             print(f"DEBUG: 成功替换了 {numeric_replaced_count} 个数值embedding")
         
         # 调用父类forward，传入修改后的inputs_embeds
+        # 始终优先使用 embeddings；若无法构造，则回退到原始 input_ids
+        use_input_ids = None if base_inputs_embeds is not None else input_ids
         outputs = super().forward(
-            input_ids=None,  # 使用inputs_embeds时设为None
+            input_ids=use_input_ids,
             attention_mask=attention_mask,
             position_ids=position_ids,
             past_key_values=past_key_values,
-            inputs_embeds=modified_inputs_embeds,
+            inputs_embeds=base_inputs_embeds,
             labels=None,  # 暂时不传labels，后续手动计算loss
             use_cache=use_cache,
             output_attentions=output_attentions,
@@ -401,11 +373,11 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         else:
             # fallback: 如果没有hidden_states，重新forward一次获取
             temp_outputs = super().forward(
-                input_ids=None,
+                input_ids=use_input_ids,
                 attention_mask=attention_mask,
                 position_ids=position_ids,
                 past_key_values=past_key_values,
-                inputs_embeds=modified_inputs_embeds,
+                inputs_embeds=base_inputs_embeds,
                 labels=None,
                 use_cache=use_cache,
                 output_attentions=output_attentions,
@@ -494,6 +466,87 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         return pattern.sub(repl, text)
     
     @torch.no_grad()
+    def generate(
+        self,
+        *args,
+        tokenizer=None,
+        format_numbers: bool = False,
+        return_text: bool = False,
+        skip_special_tokens: bool = False,
+        clean_up_tokenization_spaces: bool = False,
+        **kwargs
+    ):
+        """
+        数值增强版 generate。
+        - 保持与父类相同的默认返回：仅返回 sequences。
+        - 如需文本与数值填充，传入 tokenizer 且设置 return_text=True 或 format_numbers=True。
+
+        返回：
+          - 默认：Tensor sequences
+          - 当 return_text 或 format_numbers 为 True：返回 (sequences, raw_texts, filled_texts)
+        """
+        # 先执行标准生成以获得 token 序列
+        sequences = super().generate(*args, **kwargs)
+
+        # 快速路径：与父类行为一致
+        need_text = bool(return_text or format_numbers)
+        if not need_text:
+            return sequences
+
+        if tokenizer is None:
+            # 无法解码与格式化时，退回父类行为
+            return sequences
+
+        # 归一化为 [B, T]
+        if sequences.dim() == 1:
+            sequences = sequences.unsqueeze(0)
+
+        # 解码原始文本
+        raw_texts = [
+            tokenizer.decode(
+                seq,
+                skip_special_tokens=skip_special_tokens,
+                clean_up_tokenization_spaces=clean_up_tokenization_spaces,
+            )
+            for seq in sequences
+        ]
+
+        # 默认不做数值填充
+        filled_texts = raw_texts
+
+        if format_numbers:
+            # 基于最终序列再跑一遍 forward 以拿到 hidden_states，并用回归头预测数值
+            try:
+                outputs = super().forward(
+                    input_ids=sequences,
+                    output_hidden_states=True,
+                    return_dict=True,
+                )
+                # [B, T, H] -> [B, T]
+                predicted_floats = self.regression_head(outputs.hidden_states[-1]).squeeze(-1)
+
+                filled_texts_new = []
+                for b_idx, seq in enumerate(sequences):
+                    seq_list = seq.tolist()
+                    num_pad_id = getattr(self.config, 'num_pad_token_id', None) or getattr(self, 'num_pad_token_id', None)
+                    collected_vals = []
+                    if num_pad_id is not None:
+                        for pos, tok_id in enumerate(seq_list):
+                            if tok_id == num_pad_id:
+                                try:
+                                    collected_vals.append(float(predicted_floats[b_idx, pos].item()))
+                                except Exception:
+                                    collected_vals.append(0.0)
+                    filled_texts_new.append(self._fill_numeric_in_text(raw_texts[b_idx], collected_vals))
+                filled_texts = filled_texts_new
+            except Exception:
+                # 失败时保持原文
+                filled_texts = raw_texts
+
+        return sequences, raw_texts, filled_texts
+
+    # 向后兼容：保留旧 API 名称
+    @torch.no_grad()
     def generate_with_numeric(
         self,
         tokenizer,
@@ -504,43 +557,15 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         clean_up_tokenization_spaces: bool = False,
         **kwargs
     ):
-        """包装生成: 返回 (sequences, texts, filled_texts)"""
-        sequences = super().generate(*args, **kwargs)
-        if not return_text:
-            return sequences, None, None
-
-        if sequences.dim() == 1:
-            sequences = sequences.unsqueeze(0)
-        raw_texts = [
-            tokenizer.decode(seq, skip_special_tokens=skip_special_tokens, clean_up_tokenization_spaces=clean_up_tokenization_spaces)
-            for seq in sequences
-        ]
-        
-        filled_texts = raw_texts
-        if format_numbers:
-            outputs = super().forward(
-                input_ids=sequences,
-                output_hidden_states=True,
-                return_dict=True
-            )
-            predicted_floats = self.regression_head(outputs.hidden_states[-1]).squeeze(-1)
-            
-            filled_texts_new = []
-            for b_idx, seq in enumerate(sequences):
-                seq_list = seq.tolist()
-                num_pad_id = getattr(self.config, 'num_pad_token_id', None) or getattr(self, 'num_pad_token_id', None)
-                collected_vals = []
-                if num_pad_id is not None:
-                    for pos, tok_id in enumerate(seq_list):
-                        if tok_id == num_pad_id:
-                            try:
-                                collected_vals.append(float(predicted_floats[b_idx, pos].item()))
-                            except Exception:
-                                collected_vals.append(0.0)
-                filled_texts_new.append(self._fill_numeric_in_text(raw_texts[b_idx], collected_vals))
-            filled_texts = filled_texts_new
-
-        return sequences, raw_texts, filled_texts
+        return self.generate(
+            *args,
+            tokenizer=tokenizer,
+            format_numbers=format_numbers,
+            return_text=return_text,
+            skip_special_tokens=skip_special_tokens,
+            clean_up_tokenization_spaces=clean_up_tokenization_spaces,
+            **kwargs,
+        )
     
     def _compute_mixed_loss(
         self,
