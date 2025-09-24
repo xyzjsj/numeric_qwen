@@ -1,4 +1,4 @@
-from jyb_numeric_qwen2_5_vl import NumericQwen2_5_VLForConditionalGeneration, NumericQwen2_5_VLProcessor
+from numeric_qwen2_5_vl import NumericQwen2_5_VLForConditionalGeneration, NumericQwen2_5_VLProcessor
 import os
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 MODEL_PATH = "/data1/wangzhiye/qwen253B"
@@ -16,8 +16,9 @@ conversation = [
         {"type": "text", "text": "这个产品评分为<num><8.5>分，价格是<num><299.99>元。"}
     ]},
 ]
-text = processor.apply_chat_template(conversation,
+text = processor.tokenizer.apply_chat_template(conversation,
                                     # return_tensors="pt",
+                                    tokenize=False,
                                     padding=True,
                                     truncation=True,
                                     add_generation_prompt=True)
@@ -26,4 +27,3 @@ print("inputs:", inputs)
 inputs = inputs.to(model.device)
 outputs = model.generate(**inputs, max_new_tokens=40)
 print(processor.decode(outputs[0][inputs["input_ids"].shape[-1]:]))
-

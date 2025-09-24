@@ -93,46 +93,6 @@ class NumericQwen2_5_VLProcessor(Qwen2_5_VLProcessor):
         else:
             self.num_additional_image_tokens = getattr(self, 'num_additional_image_tokens', 1)
     
-    @classmethod
-    def from_pretrained(cls, *args, **kwargs):
-        processor = super().from_pretrained(*args, **kwargs)
-        try:
-            import json
-            import os
-            pretrained_model_name_or_path = args[0] if args else kwargs.get('pretrained_model_name_or_path')
-            if pretrained_model_name_or_path:
-                config_path = os.path.join(pretrained_model_name_or_path, 'preprocessor_config.json')
-                if os.path.exists(config_path):
-                    with open(config_path, 'r') as f:
-                        config = json.load(f)
-                    if 'num_additional_image_tokens' in config:
-                        processor.num_additional_image_tokens = config['num_additional_image_tokens']
-                        print(f"✅ 从配置加载 num_additional_image_tokens: {processor.num_additional_image_tokens}")
-        except Exception as e:
-            processor.num_additional_image_tokens = 1
-        return processor
-        
-    def extract_numeric_values(self, text: str) -> Tuple[List[float], List[int]]:
-        """
-        从文本中提取数值和位置
-        """
-        values = []
-        positions = []
-        
-        matches = list(self.numeric_pattern.finditer(text))
-        for match in matches:
-            try:
-                value = float(match.group(1))
-                values.append(value)
-                
-                start_char = match.start()
-                token_pos = len(self.tokenizer.encode(text[:start_char], add_special_tokens=False))
-                positions.append(token_pos)
-            except ValueError:
-                continue
-                
-        return values, positions
-    
     def _process_text_with_numeric_tokens(self, text: Union[str, List[str]]) -> Tuple[Union[str, List[str]], List[List[float]]]:
         is_batched = isinstance(text, list)
         if not is_batched:
@@ -281,21 +241,17 @@ class NumericQwen2_5_VLForConditionalGeneration(Qwen2_5_VLForConditionalGenerati
         numeric_replaced_count = 0
 
         # 1) 构造基础 embeddings（优先使用传入的 inputs_embeds，否则用 input_ids 计算）
-       
-        base_inputs_embeds = inputs_embeds.clone()
+        if inputs_embeds is not None:
+            base_inputs_embeds = inputs_embeds.clone()
        
 
         # 2) 融入数值 embedding（需要 input_ids 才能定位替换位置）
         if (
-            base_inputs_embeds is not None
+            base_inputs_embeds is None
             and input_ids is not None
             and numeric_values is not None
             and numeric_positions is not None
         ):
-            # 清理 NaN
-            if torch.isnan(base_inputs_embeds).any():
-                print("embeddings包含NaN!!!!!!")
-                base_inputs_embeds = torch.nan_to_num(base_inputs_embeds, nan=0.0)
 
             num_pad_token_id = getattr(self.config, 'num_pad_token_id', None) or getattr(self, 'num_pad_token_id', None)
             if num_pad_token_id is not None:
