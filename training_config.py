@@ -554,9 +554,9 @@ def create_model_and_processor(
 # 在 training_config.py 中添加这些修改
 
 def get_training_config(
-    output_dir: str = "./numeric_qwen2_5_vl_output",
-    model_path: str = "Qwen/Qwen2.5-VL-3B-Instruct",
-    data_path: str = "./data/numeric_training_data.json",
+    output_dir: str = "./numeric_qwen2_5_vl_output_new",
+    model_path: str = "/data1/wangzhiye/qwen253B",
+    data_path: str = "/data1/wangzhiye/LLaMA-Factory/data/6vqa_train_numeric.json",
     val_data_path: str = None,
     test_data_path: str = None,
     image_folder: str = "./data/images",

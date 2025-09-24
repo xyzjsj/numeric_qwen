@@ -75,8 +75,8 @@ def main():
     
     # 获取训练配置
     training_args = get_training_config(
-        output_dir="/data1/wangzhiye/1a1a11/original/output",
-        model_path="Qwen/Qwen2.5-VL-3B-Instruct",
+        output_dir="/data1/wangzhiye/1a1a11/original/output_new_jyb",
+        model_path="/data1/wangzhiye/qwen253B",
         data_path="/data1/wangzhiye/LLaMA-Factory/data/6vqa_data_extracted_converted_numeric.json",
         val_data_path=None,
         test_data_path=None,
